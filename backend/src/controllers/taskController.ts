@@ -7,7 +7,11 @@ export const getTasks = async (req: Request, res: Response): Promise<void> => {
     const tasks = await Task.find();
     res.json(tasks);
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    if (error instanceof Error) {
+      res.status(500).json({ message: error.message });
+    } else {
+      res.status(500).json({ message: 'Unknown error' });
+    }
   }
 };
 
@@ -25,6 +29,10 @@ export const createTask = async (req: Request, res: Response): Promise<void> => 
     const newTask = await task.save();
     res.status(201).json(newTask);
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    if (error instanceof Error) {
+      res.status(400).json({ message: error.message });
+    } else {
+      res.status(400).json({ message: 'Unknown error' });
+    }
   }
 };
