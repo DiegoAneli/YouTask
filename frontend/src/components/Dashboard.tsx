@@ -83,18 +83,18 @@ const Dashboard: React.FC = () => {
         ) : error ? (
           <p className="text-red-500 text-center">{error}</p>
         ) : (
-          <div className="flex flex-wrap justify-center">
-            <section id="add-project" className="w-full md:w-1/2 lg:w-1/3 p-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <section id="add-project">
               <Card title="Aggiungi Progetto">
                 <AddProject />
               </Card>
             </section>
-            <section id="add-task" className="w-full md:w-1/2 lg:w-1/3 p-4">
+            <section id="add-task">
               <Card title="Aggiungi Attività">
                 <AddTask />
               </Card>
             </section>
-            <section id="projects" className="w-full md:w-1/2 lg:w-1/3 p-4">
+            <section id="projects">
               <Card title="Progetti">
                 <ul>
                   {projects.length > 0 ? (
@@ -109,7 +109,7 @@ const Dashboard: React.FC = () => {
                 </ul>
               </Card>
             </section>
-            <section id="tasks" className="w-full md:w-1/2 lg:w-1/3 p-4">
+            <section id="tasks">
               <Card title="Attività Recenti">
                 <ul>
                   {tasks.length > 0 ? (
@@ -124,17 +124,17 @@ const Dashboard: React.FC = () => {
                 </ul>
               </Card>
             </section>
-            <section id="chat" className="w-full md:w-1/2 lg:w-1/3 p-4">
+            <section id="chat">
               <Card title="Chat">
                 <Chat />
               </Card>
             </section>
-            <section id="upload" className="w-full md:w-1/2 lg:w-1/3 p-4">
+            <section id="upload">
               <Card title="Carica Documento">
                 <DocumentUpload />
               </Card>
             </section>
-            <section id="video" className="w-full md:w-1/2 lg:w-1/3 p-4">
+            <section id="video">
               <Card title="Videoconferenza">
                 <VideoConference />
               </Card>
