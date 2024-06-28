@@ -1,18 +1,10 @@
 # Dependencies
 node_modules/
-backend/node_modules/
-frontend/node_modules/
 
 # Logs
 logs/
 *.log
 npm-debug.log*
-
-# Editor directories and files
-.idea/
-.vscode/
-*.sublime-project
-*.sublime-workspace
 
 # Environment variables
 .env
@@ -20,8 +12,6 @@ npm-debug.log*
 # Build output
 dist/
 build/
-.next/
-out/
 
 # System files
 .DS_Store
