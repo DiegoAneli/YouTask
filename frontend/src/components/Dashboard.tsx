@@ -39,7 +39,7 @@ const Dashboard: React.FC = () => {
   return (
     <div className="container mx-auto">
       <h1 className="text-4xl font-bold text-center my-8">Dashboard</h1>
-      {error && <p className="text-red-500">{error}</p>}
+      {error && <p className="text-red-500 text-center">{error}</p>}
       <div className="flex flex-wrap justify-center">
         <Card title="Aggiungi Progetto">
           <AddProject />
@@ -55,7 +55,6 @@ const Dashboard: React.FC = () => {
               projects.map((project) => (
                 <li key={project.id}>
                   {project.name}
-                  {/* Add link to project details if needed */}
                 </li>
               ))
             ) : (
@@ -69,7 +68,6 @@ const Dashboard: React.FC = () => {
               tasks.map((task) => (
                 <li key={task.id}>
                   {task.name}
-                  {/* Add link to task details if needed */}
                 </li>
               ))
             ) : (
