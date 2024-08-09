@@ -110,7 +110,7 @@ const Dashboard: React.FC = () => {
               </Card>
             </section>
             <section id="tasks">
-              <Card title="Attività Recenti">
+              <Card title="Attivita Recenti">
                 <ul>
                   {tasks.length > 0 ? (
                     tasks.map((task) => (
