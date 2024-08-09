@@ -119,7 +119,7 @@ const Dashboard: React.FC = () => {
                       </li>
                     ))
                   ) : (
-                    <li>Nessuna attività disponibile</li>
+                    <li>Nessuna attivita disponibile</li>
                   )}
                 </ul>
               </Card>
